@@ -1,0 +1,29 @@
+
+
+
+.app-bg{
+  background-color: #f4f2f2;
+}
+
+
+.app-wrapper{
+  display: grid;
+  grid-template-areas: 
+  "h h"
+  "n c";
+  grid-template-rows: 60px 1fr;
+  grid-template-columns: 2fr 10fr;
+  grid-gap: 10px;
+  width: 1200px;
+  margin: 0 auto;
+  background-color: #f4f2f2;
+}
+
+.app-wraper-content{
+	grid-area: c;
+	background-color: #fff;
+	border-radius: 5px;
+  padding: 20px;
+ }
+
+
