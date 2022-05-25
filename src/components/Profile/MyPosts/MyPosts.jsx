@@ -1,6 +1,7 @@
 import React from 'react';
 import clases from './MyPosts.module.css';
 import Post from './Post/Post';
+import {addPostActionCreator, newPostElementActionCreator } from '../../../redux/state'
 
 
 const MyPosts = (props) => {
@@ -9,7 +10,7 @@ const MyPosts = (props) => {
 
 	let addPost = () => {
 		//props.addPost();
-		props.dispatch ( { type: 'ADD-POST'});
+		props.dispatch (addPostActionCreator());
 	};
 
 	let postElements = props.postsData.map( post => <Post message = {post.post} likes = {post.likescount} /> );
@@ -17,7 +18,8 @@ const MyPosts = (props) => {
 	let onPostChange = () => {
 		let text = newPostElement.current.value;
 		//props.updateNewPostText (text);
-		props.dispatch ({ type: 'UPDATE-NEW-POST-TEXT', newText: text });
+		props.dispatch (newPostElementActionCreator(text));
+		//props.dispatch ({ type: 'UPDATE-NEW-POST-TEXT', newText: text });
 	};
 
 	return <div className={clases.postBlock}>	 

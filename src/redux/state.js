@@ -67,10 +67,23 @@ let store = {
 			this._state.profilePage.newPostText = action.newText;
 			this._callSubscriber(this._state);
 		}
-	}				
+	}
 	
-
 };
+
+export const addPostActionCreator = ()  => {
+	return {
+		type: 'ADD-POST'
+	}
+};
+
+export const newPostElementActionCreator = (text) => {
+	return {
+		type: 'UPDATE-NEW-POST-TEXT', newText: text
+	}
+};
+
+
 
 export default store;
 window.store = store;
