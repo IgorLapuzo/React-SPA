@@ -22,8 +22,8 @@ let store = {
 				{ id: 2, name: 'Петя' },
 				{ id: 3, name: 'Вася' },
 				{ id: 4, name: 'Саша' },
-			]
-		}
+			],
+		},
 	},
 	_callSubscriber() {
 		console.log ('State changed')
@@ -34,25 +34,7 @@ let store = {
 	subscribe(observer) {
 		this._callSubscriber = observer;
 	},
-	addPost() {
-		
-	},
-	updateNewPostText(newText) {
-		
-	},
-	addMessage() {
-		let newMessage = {
-			id: 4,
-			message: this._state.dialogsPage.newDialogMessage,
-		};
-		this._state.dialogsPage.messages.push(newMessage)
-		this._state.dialogsPage.newDialogMessage = '';
-		this._callSubscriber(this._state);
-	},
-	updateNewMessage(newMessageText) {
-		this._state.dialogsPage.newDialogMessage = newMessageText;
-		this._callSubscriber(this._state);
-	},
+	
 	dispatch(action) {
 		if (action.type === 'ADD-POST') {
 			let newPost = {
@@ -60,18 +42,30 @@ let store = {
 				post: this._state.profilePage.newPostText,
 				likescount: 0,
 			};
+			debugger;
 			this._state.profilePage.postsData.push(newPost);
 			this._state.profilePage.newPostText = '';
 			this._callSubscriber(this._state);
 		} else if (action.type === 'UPDATE-NEW-POST-TEXT') {
 			this._state.profilePage.newPostText = action.newText;
 			this._callSubscriber(this._state);
+		} else if (action.type === 'ADD-MESSAGE') {
+			let newMessage = {
+				id: 5,
+				message: this._state.dialogsPage.newDialogMessage,
+			};
+			this._state.dialogsPage.messages.push(newMessage)
+			this._state.dialogsPage.newDialogMessage = '';
+			this._callSubscriber(this._state);
+		} else if (action.type === 'UPDATE-NEW-MESSAGE-TEXT') {
+			this._state.dialogsPage.newDialogMessage = action.newMessage;
+			this._callSubscriber(this._state);
 		}
 	}
 	
 };
 
-export const addPostActionCreator = ()  => {
+export const addPostActionCreator = () => {
 	return {
 		type: 'ADD-POST'
 	}
@@ -83,7 +77,19 @@ export const newPostElementActionCreator = (text) => {
 	}
 };
 
+export const addMessageActionCreator = () => {
+	return {
+		type: 'ADD-MESSAGE'
+	}
+};
+
+export const newMessageElementActionCreator = (message) => {
+	return {
+		type: 'UPDATE-NEW-MESSAGE-TEXT', newMessage: message
+	}
+};
 
 
 export default store;
 window.store = store;
+

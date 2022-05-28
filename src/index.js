@@ -13,7 +13,7 @@ let renderEntireTree = (state) => {
 	  </React.StrictMode>,
 	  document.getElementById('root')
 	);
-	};
+};
 	
 
 renderEntireTree(store.getState());
