@@ -1,4 +1,20 @@
-const dialogsReducer = (state, action) => {
+let initialState = {
+	messages: [
+		{ id: 1, message: 'Привет' },
+		{ id: 2, message: 'Как дела?' },
+		{ id: 3, message: 'Идем в кино' },
+		{ id: 4, message: 'Что делать?' },
+	],
+	newDialogMessage: '',
+	dialogs: [
+		{ id: 1, name: 'Ира' },
+		{ id: 2, name: 'Петя' },
+		{ id: 3, name: 'Вася' },
+		{ id: 4, name: 'Саша' },
+	],
+};
+
+const dialogsReducer = (state = initialState, action) => {
 	switch (action.type) {
 		case 'ADD-MESSAGE':
 			let newMessage = {
