@@ -14,7 +14,7 @@
   grid-template-rows: 60px 1fr;
   grid-template-columns: 2fr 10fr;
   grid-gap: 10px;
-  width: 1200px;
+  width: 1000px;
   margin: 0 auto;
   background-color: #f4f2f2;
 }

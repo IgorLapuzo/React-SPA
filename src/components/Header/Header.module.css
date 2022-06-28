@@ -1,4 +1,7 @@
-
+.container {
+	display: flex;
+	justify-content: space-between;
+}
 
 .header{
 	grid-area: h;
@@ -8,8 +11,44 @@
  
 .header img{
 	width: 100px;
-	margin: 15px 0 0 15px;
+	margin: 5px 0 0 15px;
 }
 
+.buttonWraper {
+	align-self: center;
+	margin-right: 20px;
+}
 
+.buttonLeft {
+	width: 80px;
+	height: 30px;
+	border-radius: 15px 0 0 15px;
+	border: 1px solid #fff;
+	background: #0BAEDA;
+	color: #fff;
+}
+
+.buttonRight {
+	width: 80px;
+	height: 30px;
+	border-radius: 0 15px 15px 0;
+	border: 1px solid #fff;
+	background: #0BAEDA;
+	color: #fff;
+}
+
+.buttonLeft:hover {
+	background: #00677E;
+}
+
+.buttonLeft:active {
+	background: #87CEFA;
+}
+.buttonRight:hover {
+	background: #00677E;
+}
+
+.buttonRight:active {
+	background: #87CEFA;
+}
 

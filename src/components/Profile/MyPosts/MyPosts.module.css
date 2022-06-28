@@ -1,2 +1,52 @@
+.postBlock {
+	
+}
+
+.title {
+	text-align: center;
+	color: #088DCD;
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.myPostsWraper {
+	display: flex;
+	justify-content: center;
+	
+}
+
+.inputWraper {
+	
+}
+
+.input{
+	
+	resize: none;
+	width: 400px;
+	height: 40px;
+	border-radius: 7px;
+	margin-left: 50px;
+}
+
+.buttonWrapper {
+	align-self: center;
+}
+
+.button {
+	width: 80px;
+	height: 30px;
+	border-radius: 15px;
+	border: 1px solid #fff;
+	background: #0BAEDA;
+	color: #fff;
+}
+
+.button:hover {
+	background: #00677E;
+}
+
+.button:active {
+	background: #87CEFA;
+}
 
  

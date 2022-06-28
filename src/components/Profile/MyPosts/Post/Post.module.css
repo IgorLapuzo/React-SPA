@@ -1,6 +1,30 @@
+.post {
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	margin: 10px;
+	margin-left: 50px ;
+}
 
-.post img{
+.wraper {
+	display: flex;
+	margin: 10px;
+	
+}
+
+.post img {
 	width: 70px;
 	height: 70px;
 	border-radius: 50%;
+}
+
+.postBody {
+	align-self: center;
+	margin-left: 30px;
+}
+
+.likes {
+	text-align: right;
+	margin-right: 20px;
+	float: top;
+	margin-top: -20px;
 }

@@ -1,10 +1,23 @@
 
  
- .UserInfo img{
-	width: 1000px;
+.background img{
+	width: 800px;
 	height: 200px;
- }
+	border-radius: 10px;
+}
 
- .descriptionBlock{
-	 padding: 0px;
- }
+.descriptionBlock{
+	display: flex;
+	padding: 0px;
+}
+
+.descriptionBlock img{
+	position: relative;
+	float: top;
+	margin-top: -50%;
+	margin-left: 20px;
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	border: 5px solid #fff ;
+}

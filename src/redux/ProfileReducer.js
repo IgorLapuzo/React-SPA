@@ -2,8 +2,6 @@ let initialState = {
 	postsData: [
 		{ id: 1, post: "It's my first post", likescount: 23 },
 		{ id: 2, post: "Hi, how are you?", likescount: 18 },
-		{ id: 3, post: "Hi", likescount: 10 },
-		{ id: 4, post: "Hello", likescount: 50 },
 	],
 	newPostText: '',
 };
@@ -12,7 +10,7 @@ const profileReducer = (state = initialState, action) => {
 	switch (action.type) {
 		case 'ADD-POST':
 			let newPost = {
-				id: 5,
+				id: 3,
 				post: state.newPostText,
 				likescount: 0,
 			};
