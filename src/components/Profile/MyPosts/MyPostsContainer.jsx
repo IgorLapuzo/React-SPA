@@ -2,7 +2,6 @@ import React from 'react';
 import MyPosts from './MyPosts';
 import {addPostActionCreator, newPostElementActionCreator } from '../../../redux/ProfileReducer'
 
-
 const MyPostsContainer = (props) => {
 
 	let state = props.store.getState();

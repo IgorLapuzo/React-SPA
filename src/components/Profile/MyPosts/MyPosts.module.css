@@ -1,26 +1,21 @@
 .postBlock {
-	
+	margin-top: 20px;
 }
 
 .title {
+	font-size: 16px;
 	text-align: center;
 	color: #088DCD;
 	font-size: 20px;
-	font-weight: 700;
+	font-weight: 600;
 }
 
 .myPostsWraper {
 	display: flex;
 	justify-content: center;
-	
-}
-
-.inputWraper {
-	
 }
 
 .input{
-	
 	resize: none;
 	width: 400px;
 	height: 40px;
@@ -30,6 +25,7 @@
 
 .buttonWrapper {
 	align-self: center;
+	margin-left: 10px;
 }
 
 .button {

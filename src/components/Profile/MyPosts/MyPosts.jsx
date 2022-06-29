@@ -2,8 +2,6 @@ import React from 'react';
 import clases from './MyPosts.module.css';
 import Post from './Post/Post';
 
-
-
 const MyPosts = (props) => {
 	
 	let postElements = props.profilePage.postsData.map( post => <Post message = {post.post} likes = {post.likescount} /> );
@@ -17,7 +15,8 @@ const MyPosts = (props) => {
 
 	return (
 		<div className = {clases.postBlock}>	 
-			<div className = {clases.title}>New post</div>
+			<div className = {clases.title}>My posts</div>
+			{ postElements }
 			<div className = {clases.myPostsWraper}>
 				<div className = {clases.inputWraper}>
 					<textarea className = {clases.input} onChange = { onPostChange } 
@@ -27,8 +26,6 @@ const MyPosts = (props) => {
 					<button className = {clases.button} onClick={ onAddPost }>Add post</button>
 				</div>			
 			</div>
-			
-			{ postElements }
 		</div> 
 	);
 };

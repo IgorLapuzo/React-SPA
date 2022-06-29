@@ -3,7 +3,6 @@ import clases from './Dialogs.module.css';
 import DialogItem from './DialogItem/DialogItem';
 import Message from './Message/Message';
 
-
 const Dialogs = (props) => {
 
 	let dialogElements = props.dialogsPage.dialogs.map( name => <DialogItem name = {name.name} id = {name.id} /> );
@@ -23,11 +22,16 @@ const Dialogs = (props) => {
 				{dialogElements}				
 			</div>
 			<div className={clases.messages}>
+				<div className = {clases.titleName}>Title</div>
 				{ messageElements }
-				<textarea 
-				onChange={ onMessageChange }
-				value={props.dialogsPage.newDialogMessage} />
-				<button onClick={ addMessage }>add message</button>
+				<div className = {clases.inputAddWraper} >
+					<textarea className = {clases.input}
+						onChange={ onMessageChange }
+						value={props.dialogsPage.newDialogMessage} />
+					<div className = {clases.buttonWrapper}>
+						<button className = {clases.button} onClick={ addMessage }>Add message</button>
+					</div>					
+				</div>				
 			</div>
 		</div>
 	)

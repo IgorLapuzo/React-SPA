@@ -6,12 +6,11 @@
 }
 .dialogs{
 	border-right: solid 1px #E1E8ED;
-
 }
 
 .passive{
 	text-decoration: none;
-	color: #545454;
+	color: #A29999;
 	font-weight: 600;
 }
 .active{
@@ -26,14 +25,56 @@
 	border-bottom: solid 1px #E1E8ED;
 }
 
-
+.titleName {
+	font-size: 18px;
+	margin-left: 20px;
+	font-weight: 600;
+	color: #088DCD;
+}
 
 .messages{
-
-
+	margin: 10px;
 }
+
 .message{
 	color: #545454;
+	background-color: #EBF2FF;
 	margin: 20px;
+	border-radius: 7px;
+}
 
+.inputAddWraper {	
+	display: flex;
+}
+
+.input{
+	font-size: 16px;
+	color: #545454;
+	resize: none;
+	width: 400px;
+	height: 40px;
+	border-radius: 7px;
+	margin-left: 20px;
+}
+
+.buttonWrapper {
+	align-self: center;
+	margin-left: 10px;
+}
+
+.button {
+	width: 100px;
+	height: 30px;
+	border-radius: 15px;
+	border: 1px solid #fff;
+	background: #0BAEDA;
+	color: #fff;
+}
+
+.button:hover {
+	background: #00677E;
+}
+
+.button:active {
+	background: #87CEFA;
 }

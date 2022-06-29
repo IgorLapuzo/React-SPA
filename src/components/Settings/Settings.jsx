@@ -4,9 +4,9 @@ import clases from './Settings.module.css';
 const Settings = () => {
 	return (
 		<div>
-			Settings
+			Settings - working on it
 		</div>
 	)
-}
+};
 
 export default Settings;

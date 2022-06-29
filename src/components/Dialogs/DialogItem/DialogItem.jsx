@@ -9,6 +9,6 @@ const DialogItem = (props) => {
 					<NavLink to = {path} className = {navData => navData.isActive ? clases.active : clases.passive}>{props.name}</NavLink>
 				</div>
 	)
-}
+};
 
 export default DialogItem;

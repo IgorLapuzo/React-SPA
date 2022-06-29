@@ -4,9 +4,9 @@ import clases from './News.module.css';
 const News = () => {
 	return (
 		<div>
-			News
+			News - working on it
 		</div>
 	)
-}
+};
 
 export default News;

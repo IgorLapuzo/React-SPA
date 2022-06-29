@@ -1,7 +1,7 @@
 let initialState = {
 	postsData: [
-		{ id: 1, post: "It's my first post", likescount: 23 },
-		{ id: 2, post: "Hi, how are you?", likescount: 18 },
+		{ id: 1, post: "Hi!!! It's my first post", likescount: 23 },
+		{ id: 2, post: "I'm particularly keen on Java Script", likescount: 18 },
 	],
 	newPostText: '',
 };

@@ -11,7 +11,6 @@ const Post = (props) => {
 		
 		<div className = {clases.likes}>likes {props.likes}</div>
 	</div> 
-	
-}
+};
 
 export default Post;

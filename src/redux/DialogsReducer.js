@@ -1,16 +1,16 @@
 let initialState = {
 	messages: [
-		{ id: 1, message: 'Привет' },
-		{ id: 2, message: 'Как дела?' },
-		{ id: 3, message: 'Идем в кино' },
-		{ id: 4, message: 'Что делать?' },
+		{ id: 1, message: 'Hi' },
+		{ id: 2, message: 'How are you?' },
+		{ id: 3, message: 'Let\'s go to the cinema' },
+		{ id: 4, message: 'What are you doing?' },
 	],
 	newDialogMessage: '',
 	dialogs: [
-		{ id: 1, name: 'Ира' },
-		{ id: 2, name: 'Петя' },
-		{ id: 3, name: 'Вася' },
-		{ id: 4, name: 'Саша' },
+		{ id: 1, name: 'Ira' },
+		{ id: 2, name: 'Den' },
+		{ id: 3, name: 'Bill' },
+		{ id: 4, name: 'Sarah' },
 	],
 };
 

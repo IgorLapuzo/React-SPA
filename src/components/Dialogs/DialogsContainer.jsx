@@ -2,7 +2,6 @@ import React from 'react'
 import {addMessageActionCreator, newMessageElementActionCreator} from '../../redux/DialogsReducer'
 import Dialogs from './Dialogs';
 
-
 const DialogsContainer = (props) => {
 
 	let state = props.store.getState().dialogsPage;
@@ -15,7 +14,6 @@ const DialogsContainer = (props) => {
 
 	return <Dialogs updateNewMessageBody = { onMessageChange } 
 	sendMessage = { addMessage } dialogsPage = {state} />	
-	
 };
 
 export default DialogsContainer;
