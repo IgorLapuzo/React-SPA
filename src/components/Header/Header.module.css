@@ -37,18 +37,4 @@
 	color: #fff;
 }
 
-.buttonLeft:hover {
-	background: #00677E;
-}
-
-.buttonLeft:active {
-	background: #87CEFA;
-}
-.buttonRight:hover {
-	background: #00677E;
-}
-
-.buttonRight:active {
-	background: #87CEFA;
-}
 
