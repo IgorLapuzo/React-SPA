@@ -4,7 +4,7 @@ import Post from './Post/Post';
 
 const MyPosts = (props) => {
 	
-	let postElements = props.profilePage.postsData.map( post => <Post message = {post.post} likes = {post.likescount} /> );
+	let postElements = props.postsData.map( post => <Post message = {post.post} likes = {post.likescount} /> );
 
 	let onAddPost = () => props.addPost(); 
 
@@ -20,7 +20,7 @@ const MyPosts = (props) => {
 			<div className = {clases.myPostsWraper}>
 				<div className = {clases.inputWraper}>
 					<textarea className = {clases.input} onChange = { onPostChange } 
-					value = {props.profilePage.newPostText} />
+					value = {props.newPostText} />
 				</div>
 				<div className = {clases.buttonWrapper}>
 					<button className = {clases.button} onClick={ onAddPost }>Add post</button>
