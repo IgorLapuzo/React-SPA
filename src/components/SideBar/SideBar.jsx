@@ -12,7 +12,7 @@ const SideBar = () => {
         <NavLink to='/dialogs' className = {navData => navData.isActive ? clases.active : clases.item}>Dialogs</NavLink>
       </div>
       <div>
-        <NavLink to='/news' className = {navData => navData.isActive ? clases.active : clases.item}>News</NavLink>
+        <NavLink to='/users' className = {navData => navData.isActive ? clases.active : clases.item}>Users</NavLink>
       </div>
       <div>
         <NavLink to='/music' className = {navData => navData.isActive ? clases.active : clases.item}>Music</NavLink>
