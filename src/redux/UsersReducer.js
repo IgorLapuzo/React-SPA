@@ -1,8 +1,8 @@
 let initialState = {
 	users: [
-		{id: 1, followed: true, photoURL: 'https://as2.ftcdn.net/v2/jpg/01/88/16/11/1000_F_188161181_ECXsk62DZLJR611UniB6oScNJsyZVEdZ.jpg', firstName: 'Sasha', status: 'Hi everyone', location: {cityName: 'Minsk', country: 'Belarus'}},
-		{id: 2, followed: false, photoURL: 'https://as2.ftcdn.net/v2/jpg/01/88/16/11/1000_F_188161181_ECXsk62DZLJR611UniB6oScNJsyZVEdZ.jpg', firstName: 'Petia', status: 'I\'m Boss', location: {cityName: 'Vitebsk', country: 'Belarus'}},
-		{id: 3, followed: true, photoURL: 'https://as2.ftcdn.net/v2/jpg/01/88/16/11/1000_F_188161181_ECXsk62DZLJR611UniB6oScNJsyZVEdZ.jpg', firstName: 'Valera', status: 'What a wonderful day!', location: {cityName: 'Brest', country: 'Belarus'}},
+		//{id: 1, followed: true, photoURL: 'https://as2.ftcdn.net/v2/jpg/01/88/16/11/1000_F_188161181_ECXsk62DZLJR611UniB6oScNJsyZVEdZ.jpg', firstName: 'Sasha', status: 'Hi everyone', location: {cityName: 'Minsk', country: 'Belarus'}},
+		//{id: 2, followed: false, photoURL: 'https://as2.ftcdn.net/v2/jpg/01/88/16/11/1000_F_188161181_ECXsk62DZLJR611UniB6oScNJsyZVEdZ.jpg', firstName: 'Petia', status: 'I\'m Boss', location: {cityName: 'Vitebsk', country: 'Belarus'}},
+		//{id: 3, followed: true, photoURL: 'https://as2.ftcdn.net/v2/jpg/01/88/16/11/1000_F_188161181_ECXsk62DZLJR611UniB6oScNJsyZVEdZ.jpg', firstName: 'Valera', status: 'What a wonderful day!', location: {cityName: 'Brest', country: 'Belarus'}},
 	]
 };
 
