@@ -1,9 +1,8 @@
 let initialState = {
-	users: [
-		//{id: 1, followed: true, photoURL: 'https://as2.ftcdn.net/v2/jpg/01/88/16/11/1000_F_188161181_ECXsk62DZLJR611UniB6oScNJsyZVEdZ.jpg', firstName: 'Sasha', status: 'Hi everyone', location: {cityName: 'Minsk', country: 'Belarus'}},
-		//{id: 2, followed: false, photoURL: 'https://as2.ftcdn.net/v2/jpg/01/88/16/11/1000_F_188161181_ECXsk62DZLJR611UniB6oScNJsyZVEdZ.jpg', firstName: 'Petia', status: 'I\'m Boss', location: {cityName: 'Vitebsk', country: 'Belarus'}},
-		//{id: 3, followed: true, photoURL: 'https://as2.ftcdn.net/v2/jpg/01/88/16/11/1000_F_188161181_ECXsk62DZLJR611UniB6oScNJsyZVEdZ.jpg', firstName: 'Valera', status: 'What a wonderful day!', location: {cityName: 'Brest', country: 'Belarus'}},
-	]
+	users: [],
+	pagesSize: 10,
+	totalUsersCount: 0,
+	currentPage: 1,
 };
 
 
@@ -34,7 +33,13 @@ const usersReducer = (state = initialState, action) => {
 			};
 		}
 		case 'SET-USERS': {
-			return { ...state, users: [ ...state.users, ...action.users ]}
+			return { ...state, users: action.users }
+		}
+		case 'SET-CURRENT-PAGE': {
+			return { ...state, currentPage: action.currentPage}
+		}
+		case 'SET-TOTAL-COUNT': {
+			return { ...state, totalUsersCount: action.totalUsersCount}
 		}
 		default: 
 			return state;
@@ -44,5 +49,7 @@ const usersReducer = (state = initialState, action) => {
 export const followAC = (userId) => ({ type: 'FOLLOW', userId });
 export const unfollowAC = (userId) => ({ type: 'UNFOLLOW', userId});
 export const setUsersAC = (users) => ({ type: 'SET-USERS', users});
+export const setCurrentPageAC = (currentPage) => ({ type: 'SET-CURRENT-PAGE', currentPage});
+export const setTotalUsersCountAC = (totalUsersCount) => ({ type: 'SET-TOTAL-COUNT', totalUsersCount});
 
 export default usersReducer;
