@@ -1,6 +1,7 @@
 import React from "react";
 import clases from './Users.module.css';
 import userNoLogo from './../../userNoLogo.jpg'
+import { NavLink } from "react-router-dom";
 
 let Users = (props) => {
 	let pagesCount = Math.ceil (props.totalUsersCount / props.pagesSize);
@@ -22,7 +23,9 @@ let Users = (props) => {
 						<div className = {clases.bodyItem}>
 							<div className = {clases.bodyWrapper}>
 								<div className = {clases.logoArea}>
-								<img className = {clases.img} src = { u.photos.small != null ? u.photos.small : userNoLogo} />
+									<NavLink to = {'/profile/' + u.id}>
+										<img className = {clases.img} src = { u.photos.small != null ? u.photos.small : userNoLogo} />
+									</NavLink>		
 									<div>
 										{ u.followed 
 										? <button onClick = { () => {props.unfollow(u.id)} } className = {clases.button}>Unfollow</button> 

@@ -2,8 +2,14 @@ import React from 'react';
 import clases from './ProfileInfo.module.css';
 import back from '../../../back.jpg';
 import ava from '../../../ava.JPG';
+import Preloader from '../../Common/Preloader/Preloader';
 
-const ProfileInfo = () => {
+const ProfileInfo = (props) => {
+
+	if (!props.profile) {
+		return <Preloader />
+	}
+
 	return (
 	<div className={clases.userInfo}>
 		<div className={clases.background}>
@@ -12,7 +18,8 @@ const ProfileInfo = () => {
 		<div>
 			<div className={clases.descriptionBlock}>
 				<div>
-					<img src = { ava } ></img>
+					
+					<img src = { props.profile.photos.large } />
 				</div>
 				<div className = {clases.infoSectionWraper}>
 					<div className = {clases.title}>Igor Lapuzo</div>

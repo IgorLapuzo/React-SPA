@@ -2,12 +2,12 @@ import React from 'react';
 import './App.css';
 import Header from './components/Header/Header';
 import SideBar from './components/SideBar/SideBar';
-import Profile from './components/Profile/Profile';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import UsersContainer from './components/Users/UsersContainer';
 import Music from './components/Music/Music';
 import Settings from './components/Settings/Settings';
 import DialogsContainer from './components/Dialogs/DialogsContainer';
+import ProfileContainer from './components/Profile/ProfileContainer';
 
 const App = () => {
   return (
@@ -18,8 +18,8 @@ const App = () => {
           <SideBar />
           <div className='app-wraper-content'>
             <Routes>
-              <Route path="/profile/*" 
-              element={<Profile />} />
+              <Route path="/profile/:userId" 
+              element={<ProfileContainer />} />
               <Route path="/dialogs/*" 
               element={<DialogsContainer />} />
               <Route path="/users/*" element={<UsersContainer />} />

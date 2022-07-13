@@ -4,6 +4,7 @@ let initialState = {
 		{ id: 2, post: "I'm particularly keen on Java Script", likescount: 18 },
 	],
 	newPostText: '',
+	profile: null,
 };
 
 const profileReducer = (state = initialState, action) => {
@@ -25,6 +26,9 @@ const profileReducer = (state = initialState, action) => {
 			stateCopy.newPostText = action.newText;
 			return stateCopy;
 		}
+		case 'SET-USER-PROFILE': {
+			return {...state, profile: action.profile}
+		}
 		default: 
 			return state;
 	};
@@ -32,4 +36,6 @@ const profileReducer = (state = initialState, action) => {
 
 export const addPostActionCreator = () => ({ type: 'ADD-POST' });
 export const newPostElementActionCreator = (text) => ({ type: 'UPDATE-NEW-POST-TEXT', newText: text});
+export const setUserProfile = (profile) => ({type: 'SET-USER-PROFILE', profile})
+
 export default profileReducer;
