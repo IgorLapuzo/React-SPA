@@ -2,6 +2,7 @@ import React from "react";
 import clases from './Users.module.css';
 import userNoLogo from './../../userNoLogo.jpg'
 import { NavLink } from "react-router-dom";
+import * as axios from 'axios';
 
 let Users = (props) => {
 	let pagesCount = Math.ceil (props.totalUsersCount / props.pagesSize);
@@ -28,8 +29,27 @@ let Users = (props) => {
 									</NavLink>		
 									<div>
 										{ u.followed 
-										? <button onClick = { () => {props.unfollow(u.id)} } className = {clases.button}>Unfollow</button> 
-										: <button onClick = { () => {props.follow(u.id)} } className = {clases.button}>Follow</button>}
+											? <button onClick = { () => {
+											axios.delete(`https://social-network.samuraijs.com/api/1.0/follow/${u.id}`,{ 
+												withCredentials: true, 
+												headers: { "API-KEY": "a44b13c6-81f9-404f-b19f-8f5154fea008"} 
+											})
+													.then(response => {
+														if (response.data.resultCole === 0) {
+															props.unfollow(u.id)
+														}
+													})}} className = {clases.button}>Unfollow</button> 
+
+											: <button onClick = { () => {	
+											axios.post(`https://social-network.samuraijs.com/api/1.0/follow/${u.id}`, {}, { 
+												withCredentials: true, 
+												headers: { "API-KEY": "a44b13c6-81f9-404f-b19f-8f5154fea008"} 
+											})
+													.then(response => {
+														if (response.data.resultCole === 0) {
+															props.follow(u.id)
+														}
+													})}} className = {clases.button}>Follow</button>}
 									</div>	
 								</div>
 								<div className = {clases.descriptionWraper}>

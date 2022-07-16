@@ -1,14 +1,20 @@
 import React from 'react';
 import clases from './Header.module.css';
 import logo from '../../logo.png';
+import { NavLink } from 'react-router-dom';
 
-const Header = () => {
+const Header = (props) => {
+	debugger;
 	return <header className={clases.header}>
 		<div className = {clases.container}>
 			<img src = { logo }></img>
 			<div className = {clases.buttonWraper}>
 				<button className = {clases.buttonLeft}>Register</button>
-				<button className = {clases.buttonRight}>Sign In</button>
+				{props.isAuth ? props.login : 
+					<NavLink to = {'/login'}>
+						<button className = {clases.buttonRight}>LogIn</button>
+					</NavLink>
+				}
 			</div>	
 		</div>
 		
