@@ -4,10 +4,9 @@ import logo from '../../logo.png';
 import { NavLink } from 'react-router-dom';
 
 const Header = (props) => {
-	debugger;
 	return <header className={clases.header}>
 		<div className = {clases.container}>
-			<img src = { logo }></img>
+			<img src = { logo } alt = 'no img'></img>
 			<div className = {clases.buttonWraper}>
 				<button className = {clases.buttonLeft}>Register</button>
 				{props.isAuth ? props.login : 
