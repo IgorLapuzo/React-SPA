@@ -1,3 +1,5 @@
+import { userAPI } from '../api/api';
+
 let initialState = {
 	postsData: [
 		{ id: 1, post: "Hi!!! It's my first post", likescount: 23 },
@@ -37,5 +39,11 @@ const profileReducer = (state = initialState, action) => {
 export const addPostActionCreator = () => ({ type: 'ADD-POST' });
 export const newPostElementActionCreator = (text) => ({ type: 'UPDATE-NEW-POST-TEXT', newText: text});
 export const setUserProfile = (profile) => ({type: 'SET-USER-PROFILE', profile})
+export const getUserProfile = (userId) => (dispatch) => {
+	userAPI.getProfile(userId)
+		.then (response => {
+			dispatch(setUserProfile (response.data));
+	})
+}
 
 export default profileReducer;
