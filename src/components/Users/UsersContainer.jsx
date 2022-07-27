@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import { follow, unfollow, setCurrentPage, getUsers } from '../../redux/UsersReducer';
 import Users from './Users';
 import Preloader from './../Common/Preloader/Preloader'
+import { withAuthNavigate } from '../hoc/withAuthNavigate';
+import { compose } from 'redux';
 
 
 
@@ -46,5 +48,9 @@ let mapStateToProps = (state) => {
 }
 
 
-export default connect (mapStateToProps, 
-	{follow, unfollow, setCurrentPage, getUsers}) (UsersContainer);
+
+
+export default compose (
+	//withAuthNavigate,
+	connect (mapStateToProps, {follow, unfollow, setCurrentPage, getUsers})
+) (UsersContainer)
