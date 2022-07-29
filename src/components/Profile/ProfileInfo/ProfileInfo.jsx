@@ -24,7 +24,7 @@ const ProfileInfo = (props) => {
 				</div>
 				<div className = {clases.infoSectionWraper}>
 					<div className = {clases.title}>Igor Lapuzo</div>
-					<ProfileStatus status = {props.status} />
+					<ProfileStatus status = {props.status} updateStatus = {props.updateStatus} />
 					<div className = {clases.description}>FrontEnd Developer | Java Script | React | Redux</div>
 					<div className = {clases.location}>Vitebsk, Belarus</div>
 					<div className = {clases.contactInfo}>Contact info: &nbsp;
