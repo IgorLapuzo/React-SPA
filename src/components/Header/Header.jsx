@@ -8,10 +8,10 @@ const Header = (props) => {
 		<div className = {clases.container}>
 			<img src = { logo } alt = 'no img'></img>
 			<div className = {clases.buttonWraper}>
-				<button className = {clases.buttonLeft}>Register</button>
-				{props.isAuth ? props.login : 
+				{props.isAuth 
+					? <div>{props.login} <button onClick = {props.logout} className = {clases.button}>LogOut</button></div> : 
 					<NavLink to = {'/login'}>
-						<button className = {clases.buttonRight}>LogIn</button>
+						<button className = {clases.button}>LogIn</button>
 					</NavLink>
 				}
 			</div>	
