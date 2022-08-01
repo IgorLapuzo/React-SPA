@@ -3,7 +3,8 @@ import clases from './ProfileInfo.module.css';
 import back from '../../../back.jpg';
 import ava from '../../../ava.JPG';
 import Preloader from '../../Common/Preloader/Preloader';
-import ProfileStatus from './ProfileStatus';
+//import ProfileStatus from './ProfileStatus';
+import ProfileStatusWithHooks from './ProfileStatusWithHooks';
 
 const ProfileInfo = (props) => {
 
@@ -24,7 +25,7 @@ const ProfileInfo = (props) => {
 				</div>
 				<div className = {clases.infoSectionWraper}>
 					<div className = {clases.title}>Igor Lapuzo</div>
-					<ProfileStatus status = {props.status} updateStatus = {props.updateStatus} />
+					<ProfileStatusWithHooks status = {props.status} updateStatus = {props.updateStatus} />
 					<div className = {clases.description}>FrontEnd Developer | Java Script | React | Redux</div>
 					<div className = {clases.location}>Vitebsk, Belarus</div>
 					<div className = {clases.contactInfo}>Contact info: &nbsp;
