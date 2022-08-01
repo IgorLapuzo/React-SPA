@@ -44,6 +44,7 @@ let mapStateToProps = (state) => {
 		currentPage: state.usersPage.currentPage,
 		isFetching: state.usersPage.isFetching,
 		followingInProgress: state.usersPage.followingInProgress,
+		isAuth: state.auth.isAuth,
 	}
 }
 
@@ -51,6 +52,6 @@ let mapStateToProps = (state) => {
 
 
 export default compose (
+	connect (mapStateToProps, {follow, unfollow, setCurrentPage, getUsers}),
 	//withAuthNavigate,
-	connect (mapStateToProps, {follow, unfollow, setCurrentPage, getUsers})
 ) (UsersContainer)

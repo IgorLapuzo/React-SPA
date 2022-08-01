@@ -9,7 +9,6 @@ import { withRouter } from '../hoc/withRouter';
 class ProfileContainer extends React.Component {
 
 	componentDidMount() {
-		debugger;
 		let userId = this.props.match.params.userId;
 		if (!userId) {
 			userId = this.props.authorizedUserId;
@@ -39,5 +38,5 @@ let mapStateToProps = (state) => ({
 export default compose (
 	connect (mapStateToProps, {getUserProfile, getStatus, updateStatus}),
 	withRouter,
-	//withAuthNavigate
+	withAuthNavigate
 ) (ProfileContainer)
