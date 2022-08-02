@@ -1,9 +1,7 @@
 import React from 'react';
 import clases from './ProfileInfo.module.css';
 import back from '../../../back.jpg';
-import ava from '../../../ava.JPG';
 import Preloader from '../../Common/Preloader/Preloader';
-//import ProfileStatus from './ProfileStatus';
 import ProfileStatusWithHooks from './ProfileStatusWithHooks';
 
 const ProfileInfo = (props) => {
@@ -11,6 +9,8 @@ const ProfileInfo = (props) => {
 	if (!props.profile) {
 		return <Preloader />
 	}
+
+	debugger;
 
 	return (
 	<div className={clases.userInfo}>
@@ -24,14 +24,14 @@ const ProfileInfo = (props) => {
 					<img src = { props.profile.photos.large } />
 				</div>
 				<div className = {clases.infoSectionWraper}>
-					<div className = {clases.title}>Igor Lapuzo</div>
+					<div className = {clases.title}>{ props.profile.fullName }</div>
 					<ProfileStatusWithHooks status = {props.status} updateStatus = {props.updateStatus} />
-					<div className = {clases.description}>FrontEnd Developer | Java Script | React | Redux</div>
+					<div className = {clases.description}>{ props.profile.aboutMe }FrontEnd Developer</div>
 					<div className = {clases.location}>Vitebsk, Belarus</div>
 					<div className = {clases.contactInfo}>Contact info: &nbsp;
-					<a href='https://www.linkedin.com/in/igorlapuzo/' target="_blank">LinkedIn</a>
+					<a href='https://www.linkedin.com/in/igorlapuzo/'>LinkedIn</a>
 					</div>
-					<div className = {clases.interests}>Interests: Development, English, Jogging</div> 																
+					<div className = {clases.interests}>{ props.profile.aboutMe } Interests: Development, English, Jogging</div> 																
 				</div>
 			</div>
 		</div>
