@@ -10,8 +10,6 @@ const ProfileInfo = (props) => {
 		return <Preloader />
 	}
 
-	debugger;
-
 	return (
 	<div className={clases.userInfo}>
 		<div className={clases.background}>

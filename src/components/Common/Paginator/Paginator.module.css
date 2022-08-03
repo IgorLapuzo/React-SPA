@@ -1,3 +1,46 @@
-.selectedPage {
+.paginator {
+	margin: 10px;
+}
+.pageNumber {
+	font-size: 12px;
+	padding: 2px;
+	border: 1px solid grey;
+}
+.pageNumber.selectedPage {
 	font-weight: bold;
+	border-color: black;
+}
+
+.buttonL {
+	width: 50px;
+	height: 25px;
+	border-radius: 15px 0 0 15px;
+	border: 1px solid #fff;
+	background: #0BAEDA;
+	color: #fff;
+}
+
+.buttonL:hover {
+	background: #00677E;
+}
+
+.buttonL:active {
+	background: #87CEFA;
+}
+
+.buttonR {
+	width: 50px;
+	height: 25px;
+	border-radius: 0 15px 15px 0;
+	border: 1px solid #fff;
+	background: #0BAEDA;
+	color: #fff;
+}
+
+.buttonR:hover {
+	background: #00677E;
+}
+
+.buttonR:active {
+	background: #87CEFA;
 }

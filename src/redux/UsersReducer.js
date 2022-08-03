@@ -4,13 +4,11 @@ import { updateObjectInArray } from '../utils/object-helpers'
 let initialState = {
 	users: [],
 	pagesSize: 10,
-	totalUsersCount: 0,
+	totalItemsCount: 0,
 	currentPage: 1,
 	isFetching: false,
 	followingInProgress: [],
 };
-
-
 
 const usersReducer = (state = initialState, action) => {
 	switch (action.type) {
@@ -33,7 +31,7 @@ const usersReducer = (state = initialState, action) => {
 			return { ...state, currentPage: action.currentPage}
 		}
 		case 'SET-TOTAL-COUNT': {
-			return { ...state, totalUsersCount: action.totalUsersCount}
+			return { ...state, totalItemsCount: action.totalItemsCount}
 		}
 		case 'TOGGLE-IS-FETCHING': {
 			return { ...state, isFetching: action.isFetching}
@@ -53,7 +51,7 @@ export const followSuccess = (userId) => ({ type: 'FOLLOW', userId });
 export const unfollowSuccess = (userId) => ({ type: 'UNFOLLOW', userId});
 export const setUsers = (users) => ({ type: 'SET-USERS', users});
 export const setCurrentPage = (currentPage) => ({ type: 'SET-CURRENT-PAGE', currentPage});
-export const setTotalUsersCount = (totalUsersCount) => ({ type: 'SET-TOTAL-COUNT', totalUsersCount});
+export const setTotalItemsCount = (totalItemsCount) => ({ type: 'SET-TOTAL-COUNT', totalItemsCount});
 export const setToggleFetching = (isFetching) => ({ type: 'TOGGLE-IS-FETCHING', isFetching});
 export const toggleFolowingProgress = (isFetching,  userId) => ({ type: 'TOGGLE-IS-FOLLOWING-PROGRESS', isFetching, userId});
 
@@ -64,7 +62,7 @@ export const getUsers = (page, pagesSize) => {
 		let data = await userAPI.getUsers(page, pagesSize)
 		dispatch(setToggleFetching(false));
 		dispatch(setUsers(data.items));
-		dispatch(setTotalUsersCount(data.totalCount));
+		dispatch(setTotalItemsCount(data.totalCount));
 	}
 }
 
