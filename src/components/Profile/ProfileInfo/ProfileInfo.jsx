@@ -3,6 +3,7 @@ import clases from './ProfileInfo.module.css';
 import back from '../../../back.jpg';
 import Preloader from '../../Common/Preloader/Preloader';
 import ProfileStatusWithHooks from './ProfileStatusWithHooks';
+import userNoLogo from '../../../userNoLogo.jpg'
 
 const ProfileInfo = (props) => {
 
@@ -19,7 +20,7 @@ const ProfileInfo = (props) => {
 			<div className={clases.descriptionBlock}>
 				<div>
 					
-					<img src = { props.profile.photos.large } />
+					<img src = { props.profile.photos.large != null ? props.profile.photos.large : userNoLogo} alt='no img' />
 				</div>
 				<div className = {clases.infoSectionWraper}>
 					<div className = {clases.title}>{ props.profile.fullName }</div>
