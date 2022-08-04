@@ -6,7 +6,7 @@ const SideBar = () => {
 	return (
     <nav className={clases.sidebar}>
       <div>
-        <NavLink to='/profile' className = {navData => navData.isActive ? clases.active : clases.item}>Profile</NavLink>
+        <NavLink to='/profile/24914' className = {navData => navData.isActive ? clases.active : clases.item}>Profile</NavLink>
       </div>
       <div>
         <NavLink to='/dialogs' className = {navData => navData.isActive ? clases.active : clases.item}>Dialogs</NavLink>

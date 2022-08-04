@@ -41,6 +41,8 @@ class App extends React.Component {
                   <Route path="/music/*" element={<Music />} />
                   <Route path="/settings/*" element={<Settings />} />
                   <Route path="/login/*" element={<Login />} />
+                  <Route path="/profile/*" 
+                  element={<ProfileContainer />} />
                 </Routes>
               </React.Suspense>
             </div>

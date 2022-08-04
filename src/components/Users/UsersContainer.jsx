@@ -5,8 +5,11 @@ import Users from './Users';
 import Preloader from './../Common/Preloader/Preloader'
 import { compose } from 'redux';
 
+
+
 class UsersContainer extends React.Component {
 
+	
 	componentDidMount() {
 		this.props.getUsers(this.props.currentPage, this.props.pagesSize);	
 	}
@@ -33,7 +36,7 @@ class UsersContainer extends React.Component {
 }
 
 let mapStateToProps = (state) => {
-
+	
 	return {
 		users: state.usersPage.users,
 		pagesSize: state.usersPage.pagesSize,

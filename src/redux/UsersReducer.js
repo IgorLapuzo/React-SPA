@@ -53,7 +53,7 @@ export const setUsers = (users) => ({ type: 'SET-USERS', users});
 export const setCurrentPage = (currentPage) => ({ type: 'SET-CURRENT-PAGE', currentPage});
 export const setTotalItemsCount = (totalItemsCount) => ({ type: 'SET-TOTAL-COUNT', totalItemsCount});
 export const setToggleFetching = (isFetching) => ({ type: 'TOGGLE-IS-FETCHING', isFetching});
-export const toggleFolowingProgress = (isFetching,  userId) => ({ type: 'TOGGLE-IS-FOLLOWING-PROGRESS', isFetching, userId});
+export const toggleFollowingProgress = (isFetching,  userId) => ({ type: 'TOGGLE-IS-FOLLOWING-PROGRESS', isFetching, userId});
 
 export const getUsers = (page, pagesSize) => {
 	return async (dispatch) => {
@@ -67,12 +67,12 @@ export const getUsers = (page, pagesSize) => {
 }
 
 const followUnfollowFlow = async (dispatch, userId, apiMethod, actionCreator) => {
-	dispatch(toggleFolowingProgress(true, userId))
+	dispatch(toggleFollowingProgress(true, userId))
 		let response = await apiMethod(userId)
-		if (response.data.resultCole === 0) {
+		if (response.data.resultCode === 0) {
 			dispatch(actionCreator(userId));
 		}
-		dispatch(toggleFolowingProgress(false, userId))
+		dispatch(toggleFollowingProgress(false, userId))
 }
 
 export const follow = (userId) => {

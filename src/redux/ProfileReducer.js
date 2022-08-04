@@ -3,8 +3,8 @@ import { profileAPI } from '../api/api';
 
 let initialState = {
 	postsData: [
-		{ id: 1, post: "Hi!!! It's my first post", likescount: 23 },
-		{ id: 2, post: "I'm particularly keen on Java Script", likescount: 18 },
+		{ id: 1, post: "Hi!!! You can add a post", likescount: 23 },
+		
 	],
 	newPostText: '',
 	profile: null,

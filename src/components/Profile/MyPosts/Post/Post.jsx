@@ -1,11 +1,11 @@
 import React from 'react';
 import clases from './Post.module.css';
-import logo from '../../../../ava.JPG'
+import userNoLogo from '../../../../userNoLogo.jpg'
 
 const Post = (props) => {
 	return <div className={clases.post}>
 		<div className = {clases.wraper}>
-			<img src = {logo} />
+			<img src = {userNoLogo} />
 			<div className = {clases.postBody}>{props.message}</div>
 		</div>
 		
