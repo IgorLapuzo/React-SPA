@@ -32,7 +32,9 @@ let User = ({ user, followingInProgress, unfollow, follow }) => {
 						</div>
 						<div className={clases.descriptionWraper}>
 							<div className={clases.description}>
-								<div className={clases.name}> {user.name} </div>
+								<NavLink className={clases.link} to={'/profile/' + user.id}>
+									<div className={clases.name}> {user.name} </div>
+								</NavLink>
 								<div className={clases.status}> {user.status !=null ? user.status : 'No status'} </div>
 							</div>							
 						</div>
